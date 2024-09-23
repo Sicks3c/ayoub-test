@@ -1,0 +1,16 @@
+name: Echo Branch Name on PR
+
+on:
+  pull_request:
+    branches:
+      - '**'  # This listens to pull requests on all branches
+
+jobs:
+  echo-branch-name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Echo Branch Name
+        run: echo "Branch name is ${{ github.head_ref }}"
