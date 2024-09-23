@@ -5,8 +5,6 @@ on:
     branches:
       - '**'  # This listens to pull requests on all branches
 
-  workflow_dispatch:
-
 jobs:
   echo-branch-name:
     runs-on: ubuntu-latest
